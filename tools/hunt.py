@@ -256,14 +256,14 @@ def banner():
 
 
 def search():
-    YELLOW(f'[+] Searching for username:{username}')
+    YELLOW(f' Searching for username:{username}')
     time.sleep(0.5)
     print('.......')
     time.sleep(0.5)
     print('.......\n')
     time.sleep(0.5)
 
-    YELLOW(f'[+] Hunting the hunter\n')
+    YELLOW(f' Hunting the hunter ;<[ \n')
     time.sleep(0.5)
     print('.......')
     time.sleep(0.5)
@@ -281,17 +281,17 @@ def search():
 
         if r.status_code == 200:
             if match == True:
-                GREEN('[+] FOUND MATCHES')
+                GREEN(' FOUND MATCHES :<}')
                 match = False
             YELLOW(f'\n{url} - {r.status_code} - OK')
             if username in r.text:
                 GREEN(f'POSITIVE MATCH: Username:{username} - text has been detected in url.')
             else:
-                GREEN(f'POSITIVE MATCH: Username:{username} - \033[91mtext has NOT been detected in url, could be a FALSE POSITIVE.')#
-    count += 1
+                GREEN(f'POSITIVE MATCH: Username:{username} - \033[91mtext has NOT been detected in url, could be a FALSE POSITIVE.')
+        count += 1
 
-total = len(WEBSITES)
-GREEN(f'FINISHED: A total of {count} MATCHES found out of {total} websites.')
+    total = len(WEBSITES)
+    GREEN(f'FINISHED: A total of {count} MATCHES found out of {total} websites :<] ')
 
 
 
