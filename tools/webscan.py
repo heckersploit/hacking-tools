@@ -56,7 +56,7 @@ def main():
     req = requests.get(f'https://crt.sh/?q=%.{target}&output=json')
 
     if req.status_code != 200:
-        print('[*] Information not available!')
+        print('Information not available :<[ ')
         sys.exit(1)
 
     for (key,value) in enumerate(req.json()):
