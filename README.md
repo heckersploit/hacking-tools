@@ -1,7 +1,7 @@
 # Hacking Tools
 
-!\[python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-!\[works](https://img.shields.io/badge/works-win%20linux%20termux-blue)
+[![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)]()
+[![works](https://img.shields.io/badge/works-win%20linux%20termux-blue)]()
 
 This is an awesome tools for tests of penetration or other purposes. `Use with moderation`
 
