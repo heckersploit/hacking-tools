@@ -15,6 +15,7 @@ You can use these tools in systems or emulators as <b>windows, linux</b> as well
 - Scanner
 - WeBrut
 - WebScan
+- Fuck-mail
 
 ### Contributing
 
