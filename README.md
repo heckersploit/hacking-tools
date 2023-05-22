@@ -24,3 +24,9 @@ If you want to improve this project with fixing bugs or add new features, feel f
 ### Observations
 
 * <br>WEBRUT-if</b> your request in the website is not get change it in your code and then try. if the login and password section is named diff. in the website change it in the code
+
+* <br>FUCK-MAIL-if</b> the tool is not gonna work on as gmail have removed 3rd party auth. and may not work on other mail-services 
+the new tool is going to come which will fix everything and get new things 
+
+
+         THIS REPO IS OVER NOW THE NEW TOOL IS GOING TO BE PEN-SUITEKIT WHICH WILL HAVE EVERYTHING YOU WANT
